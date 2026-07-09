@@ -1,2 +1,100 @@
 @import "tailwindcss";
 
+:root {
+  color-scheme: dark;
+}
+
+/* Custom Scrollbar for Dropdowns */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.3);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
+
+/* Animated Neon Aura Blobs */
+@keyframes blob-pivot {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.15);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+@keyframes blob-pivot-reverse {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1.1);
+  }
+  50% {
+    transform: translate(-40px, 40px) scale(0.85);
+  }
+}
+
+.animate-blob-1 {
+  animation: blob-pivot 18s infinite ease-in-out;
+  filter: blur(80px);
+}
+
+.animate-blob-2 {
+  animation: blob-pivot-reverse 22s infinite ease-in-out;
+  filter: blur(90px);
+}
+
+/* Pulsate Green for Live Badge */
+@keyframes pulse-light {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.3);
+  }
+}
+
+.animate-pulse-light {
+  animation: pulse-light 2s infinite ease-in-out;
+}
+
+/* Glassmorphism adjustments */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-input {
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-input:focus-within {
+  background: rgba(30, 41, 59, 0.8);
+  border-color: rgba(99, 102, 241, 0.5);
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.15);
+}
+
+/* Glowing text effects */
+.text-glow-indigo {
+  text-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+}
+.text-glow-cyan {
+  text-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+}

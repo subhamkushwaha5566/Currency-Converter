@@ -1,3 +1,5 @@
 import InputBox from "./InputBox";
+import CustomDropdown from "./CustomDropdown";
 
-export { default as InputBox } from "./InputBox";
+export { InputBox, CustomDropdown };
+
